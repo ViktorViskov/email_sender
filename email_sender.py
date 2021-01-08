@@ -1,16 +1,20 @@
+# Example for use
+# $python3 email_sender.py email@address.com Title "email content"
+
+
 # 
 # Libs
 # 
 import email_credentials, sys
 from smtplib import SMTP_SSL
 
-# address = "dbcrjdc@i.ua"
+# first argument is addres to send
 address = sys.argv[1]
 
-# subject = "svsjva afbwf"
+# second is email title
 title = sys.argv[2]
 
-# body = "dfsfgs afds sfgs"
+# thirdth is mail content
 body = sys.argv[3]
 
 
