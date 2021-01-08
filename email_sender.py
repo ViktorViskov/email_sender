@@ -37,13 +37,13 @@ Subject: %s
 
 """ % (sent_from, ", ".join(arr_addresses), title, body)
 
-# server config
+# server config address to main server SMTP and port
 server = SMTP_SSL('smtp.meta.ua', 465)
 
 # request
 server.ehlo()
 
-# login
+# login user name and password to connecting
 server.login(email_credentials.email_user_name, email_credentials.email_user_password)
 
 # send
