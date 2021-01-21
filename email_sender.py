@@ -5,6 +5,14 @@
 # 
 # Libs
 # 
+
+# Example of file email_credentials.py
+#
+# email_user_name = "Your@Email.Address"
+# email_user_password = "password"
+#
+
+
 import email_credentials, sys
 from smtplib import SMTP_SSL
 
