@@ -1,5 +1,5 @@
 # Example for use
-# $python3 email_sender.py email@address.com Title "email content"
+# $python3 email_sender.py email@address.com "Your title" "email message"
 
 
 # 
@@ -22,10 +22,10 @@ body = sys.argv[3]
 arr_addresses = []
 arr_addresses.append(address)
 
-# sender and target adress
+# sender address
 sent_from = email_credentials.email_user_name
 
-# email text
+# email content
 email_text = """\
 From: %s
 To: %s
@@ -40,10 +40,10 @@ Subject: %s
 # server config address to main server SMTP and port
 server = SMTP_SSL('smtp.meta.ua', 465)
 
-# request
+# make request
 server.ehlo()
 
-# login user name and password to connecting
+# user name and password to connecting
 server.login(email_credentials.email_user_name, email_credentials.email_user_password)
 
 # send
@@ -51,7 +51,6 @@ server.sendmail(sent_from, arr_addresses, email_text)
 
 # clouse connection
 server.close()
-
 
 
 # print status in console
